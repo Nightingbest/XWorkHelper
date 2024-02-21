@@ -4,7 +4,6 @@
 #define GET_cap_() cap = GetAsyncKeyState(VK_CAPITAL) & 0x0001
 #define GET_esc_() esc = GetAsyncKeyState(VK_ESCAPE) & 0x8000
 #define GET_back_() back = GetAsyncKeyState(VK_BACK) & 0x8000
-// #define GET_comma_() comma = GetAsyncKeyState(VK_OEM_COMMA) & 0x8000//"<"µÄºêÌæ»»,¾ÉµÄËøÆÁ°´¼ü
 #define GET_oem_2_() oem_2 = GetAsyncKeyState(VK_OEM_2) & 0x8000
 #define GET_period_() period = GetAsyncKeyState(VK_OEM_PERIOD) & 0x8000
 // #define GET_ctrl_() ctrl = GetAsyncKeyState(VK_CONTROL) & 0x8000//×ó\ÓÒÇÐÆÁµÄ±¸Ñ¡°´¼ü
@@ -17,18 +16,15 @@ void window() // »ñÈ¡Éú³ÉµÄÃüÁîÐÐ´°¿Ú¾ä±ú²¢Òþ²Ø´°¿Ú
     return;
 }
 
-int keyboard() // ¼ì²â°´¼ü,·µ»ØintÖµ(1À´»ØÇÐÆÁ;2ÔÝÍ£;3ÍË³ö;4ËøÆÁ;Î´°üº¬µÄÔ¤Áô¹¦ÄÜ(5×óÇÐÆÁ;6ÓÒÇÐÆÁ))
+int keyboard() // ¼ì²â°´¼ü,·µ»ØintÖµ(1À´»ØÇÐÆÁ;2ÔÝÍ£;3ÍË³ö;4ËøÆÁ)
 {
     // Ñ­»·»ñÈ¡°´¼ü×´Ì¬,ÓÉºêÃüÁîÌæ»»Íê³É
     SHORT GET_win_();
     SHORT GET_cap_();
     SHORT GET_esc_();
     SHORT GET_back_();
-    // SHORT GET_comma_();//¾ÉµÄËøÆÁ°´¼ü,¼ì²â"<"°´¼üµÄ×´Ì¬,°´ÏÂ1,ÊÍ·Å0
     SHORT GET_oem_2_();
     SHORT GET_period_();
-    // SHORT GET_ctrl_(); // ×ó\ÓÒÇÐÆÁµÄ±¸Ñ¡°´¼ü
-    // SHORT GET_alt_();  // ×ó\ÓÒÇÐÆÁµÄ±¸Ñ¡°´¼ü
     // ´Ë´¦Ìí¼ÓÐÂ°´¼ü
 
     if (win && cap) // ÇÐÆÁÅÐ¶¨,·ÅÆú´¥·¢ºó»Ú¹¦ÄÜ,¿ÉÆôÓÃ±¸Ñ¡·½°¸
@@ -203,12 +199,6 @@ void function(int choice) // ½ÓÊÜ¹¦ÄÜ´úºÅ,ÊµÏÖ¶ÔÓ¦¹¦ÄÜ:ÒÑÉÏÏß:0ÈÝ´í;1À´»ØÇÐÆÁ;2Ô
             break;
         case 4:
             lock(); // Ö´ÐÐËø¶¨
-            break;
-        case 5:
-            qie_huan_left(); // Ö´ÐÐÓÐÈÝ´íµÄÇÐ»»,µ«ÐèÒªÇÐ»»°´¼ü
-            break;
-        case 6:
-            qie_huan_right(); // Ö´ÐÐÓÐÈÝ´íµÄÇÐ»»,µ«ÐèÒªÇÐ»»°´¼ü
             break;
         default: // ÒâÁÏÖ®ÍâµÄÒì³£,µ¯³öÌáÐÑ
             MessageBox(NULL, "²ÎÊý´íÎó,ÇëÁ¢¼´·´À¡Òì³£ÖÁÓÊÏä3415592332@qq.com", "£¡:(", MB_OK);
