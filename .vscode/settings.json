@@ -54,5 +54,6 @@
         "random": "c",
         "typeinfo": "c"
     },
-    "cmake.configureOnOpen": true
+    "cmake.configureOnOpen": true,
+    "java.debug.settings.console": "externalTerminal"
 }
