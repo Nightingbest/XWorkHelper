@@ -12,7 +12,7 @@
       "environment": [],
       "externalConsole": true,
       "MIMode": "gdb",
-      "miDebuggerPath": "C:\\XWork Space\\mingw64\\bin\\gdb.exe",
+      "miDebuggerPath": "C:\\XWorkRoom\\mingw64\\bin\\gdb.exe",
       "setupCommands": [
         {
           "description": "为 gdb 启用整齐打印",
@@ -29,8 +29,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/XWork Space/XProject/XWork-Helper",
-      "program": "c:/XWork Space/XProject/XWork-Helper/build/Debug/outDebug",
+      "cwd": "c:/XWorkRoom/XProject/XWork-Helper",
+      "program": "C:/Users/Night/Documents/XProject/XWork-Helper/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
